@@ -1,12 +1,14 @@
+# ForeAct3D: Policy-Grounded Future World Modeling for VLA Policies
+
+<p align="center">
+  <img src="assets/pipeline.png" alt="ForeAct3D framework: action-conditioned semantic 3D prediction and physical-consistency supervision for VLA policies." width="100%">
+</p>
+
 ## Introduction
 
 This repository accompanies **ForeAct3D: Policy-Grounded Future World Modeling for VLA Policies**.
 
 ForeAct3D is a framework that enables Vision-Language-Action (VLA) policies to anticipate how their planned actions will change the world. Our approach predicts current and future semantic 3D scene states from shared policy features, explicitly conditioning future predictions on the policy-generated action chunk. Physical-consistency constraints connect the two states and strengthen the representation used for action generation. Future prediction serves as training supervision and is not required at inference.
-
-<p align="center">
-  <img src="assets/pipeline.png" alt="ForeAct3D framework: action-conditioned semantic 3D prediction and physical-consistency supervision for VLA policies." width="100%">
-</p>
 
 **Key Features:**
 
