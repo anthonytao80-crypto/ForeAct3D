@@ -91,7 +91,6 @@ ForeAct3D improves every suite, with an average gain of **1.7 percentage points*
   <thead>
     <tr>
       <th align="center">Method</th>
-      <th align="center">Venue, Year</th>
       <th align="center">Avg. Len.</th>
       <th align="center">Task 1</th>
       <th align="center">Task 2</th>
@@ -103,7 +102,6 @@ ForeAct3D improves every suite, with an average gain of **1.7 percentage points*
   <tbody>
     <tr>
       <td align="center">StarVLA-OFT*</td>
-      <td align="center">arXiv'26</td>
       <td align="center">2.94</td>
       <td align="center">86.4</td>
       <td align="center">70.2</td>
@@ -113,7 +111,6 @@ ForeAct3D improves every suite, with an average gain of **1.7 percentage points*
     </tr>
     <tr>
       <td align="center"><strong>ForeAct3D</strong></td>
-      <td align="center">--</td>
       <td align="center"><strong>3.73</strong></td>
       <td align="center"><strong>94.2</strong></td>
       <td align="center"><strong>85.3</strong></td>
