@@ -50,10 +50,36 @@ All numbers below are reported in the accompanying manuscript. StarVLA-OFT is th
 
 **One model for all four suites.** Success rates are percentages; higher is better.
 
-| Method | Spatial | Object | Goal | Long | Average |
-|:--|--:|--:|--:|--:|--:|
-| StarVLA-OFT | 97.8 | 98.6 | 96.2 | 93.8 | 96.6 |
-| **ForeAct3D** | **99.2** | **99.2** | **98.4** | **96.2** | **98.3** |
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">Method</th>
+      <th align="center">Spatial</th>
+      <th align="center">Object</th>
+      <th align="center">Goal</th>
+      <th align="center">Long</th>
+      <th align="center">Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">StarVLA-OFT</td>
+      <td align="center">97.8</td>
+      <td align="center">98.6</td>
+      <td align="center">96.2</td>
+      <td align="center">93.8</td>
+      <td align="center">96.6</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>ForeAct3D</strong></td>
+      <td align="center"><strong>99.2</strong></td>
+      <td align="center"><strong>99.2</strong></td>
+      <td align="center"><strong>98.4</strong></td>
+      <td align="center"><strong>96.2</strong></td>
+      <td align="center"><strong>98.3</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ForeAct3D improves every suite, with an average gain of **1.7 percentage points**.
 
@@ -61,10 +87,44 @@ ForeAct3D improves every suite, with an average gain of **1.7 percentage points*
 
 **ABC → D, without robot pretraining.** Chain success rates are percentages and indicate completion of at least the specified number of consecutive tasks. Higher is better for every metric.
 
-| Method | ≥1 task | ≥2 tasks | ≥3 tasks | ≥4 tasks | ≥5 tasks | Avg. task length |
-|:--|--:|--:|--:|--:|--:|--:|
-| StarVLA-OFT (reproduced) | 86.4 | 70.2 | 55.5 | 45.2 | 36.2 | 2.94 |
-| **ForeAct3D** | **94.2** | **85.3** | **74.4** | **64.4** | **54.8** | **3.73** |
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">Method</th>
+      <th align="center">Venue, Year</th>
+      <th align="center">Avg. Len.</th>
+      <th align="center">Task 1</th>
+      <th align="center">Task 2</th>
+      <th align="center">Task 3</th>
+      <th align="center">Task 4</th>
+      <th align="center">Task 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">StarVLA-OFT*</td>
+      <td align="center">arXiv'26</td>
+      <td align="center">2.94</td>
+      <td align="center">86.4</td>
+      <td align="center">70.2</td>
+      <td align="center">55.5</td>
+      <td align="center">45.2</td>
+      <td align="center">36.2</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>ForeAct3D</strong></td>
+      <td align="center">--</td>
+      <td align="center"><strong>3.73</strong></td>
+      <td align="center"><strong>94.2</strong></td>
+      <td align="center"><strong>85.3</strong></td>
+      <td align="center"><strong>74.4</strong></td>
+      <td align="center"><strong>64.4</strong></td>
+      <td align="center"><strong>54.8</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+\* Results reproduced by us.
 
 Average task length improves by **0.79**, with gains across all five chain lengths.
 
@@ -74,10 +134,33 @@ Average task length improves by **0.79**, with gains across all five chain lengt
 
 Experiments use the **AgileX platform**, with **50 demonstrations per task** and **15 evaluation trials per task and configuration**.
 
-| Method | Mug → yellow area | Pen → mug | Mug → container, then pen → mug | Average |
-|:--|--:|--:|--:|--:|
-| StarVLA-OFT | 0.0% (0/15) | 20.0% (3/15) | 0.0% (0/15) | 6.7% |
-| **ForeAct3D** | **33.3% (5/15)** | **60.0% (9/15)** | **20.0% (3/15)** | **37.8%** |
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">Method</th>
+      <th align="center">Mug → yellow area</th>
+      <th align="center">Pen → mug</th>
+      <th align="center">Mug → container, then pen → mug</th>
+      <th align="center">Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">StarVLA-OFT</td>
+      <td align="center">0.0% (0/15)</td>
+      <td align="center">20.0% (3/15)</td>
+      <td align="center">0.0% (0/15)</td>
+      <td align="center">6.7%</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>ForeAct3D</strong></td>
+      <td align="center"><strong>33.3% (5/15)</strong></td>
+      <td align="center"><strong>60.0% (9/15)</strong></td>
+      <td align="center"><strong>20.0% (3/15)</strong></td>
+      <td align="center"><strong>37.8%</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 Yellow-area success requires the mug to remain inside the target region at termination. The sequential task requires completion of both stages. Across the three tasks, full successes increase from **3/45 to 17/45**.
 
@@ -85,12 +168,32 @@ Yellow-area success requires the mug to remain inside the target region at termi
 
 Each component contributes to the cumulative improvement on LIBERO.
 
-| Configuration | Average success (%) |
-|:--|--:|
-| StarVLA-OFT | 96.6 |
-| + Semantic 3D prediction | 97.3 |
-| + Physical-consistency closure | 97.9 |
-| + Action conditioning (**ForeAct3D**) | **98.3** |
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">Configuration</th>
+      <th align="center">Average success (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">StarVLA-OFT</td>
+      <td align="center">96.6</td>
+    </tr>
+    <tr>
+      <td align="center">+ Semantic 3D prediction</td>
+      <td align="center">97.3</td>
+    </tr>
+    <tr>
+      <td align="center">+ Physical-consistency closure</td>
+      <td align="center">97.9</td>
+    </tr>
+    <tr>
+      <td align="center">+ Action conditioning (<strong>ForeAct3D</strong>)</td>
+      <td align="center"><strong>98.3</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 On CALVIN, removing instance-level rigidity reduces average task length from **3.73 to 3.55**. Removing all physical-consistency terms reduces it to **3.45**.
 
